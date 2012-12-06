@@ -8,7 +8,7 @@ Coffee Percolator is a [CoffeeScript](http://coffeescript.org/) [CakeFile](http:
 	class App extends Base
 		constructor: -> utils.hello()
 
-Just edit the CakeFile to point to your main source file and it will use topological sort to concatenate and compile all required sources in the correct order.
+Just edit the [CakeFile](https://github.com/soulwire/Coffee-Percolator/blob/master/CakeFile) to point to your main source file and it will use topological sort to concatenate and compile all required sources in the correct order.
 
 #### Syntax
 
@@ -28,7 +28,7 @@ and if you prefer slashes to dots, that's fine
 
     #import bits/bobs/stuff/*
 
-Check out the example for a ridiculous hypothetical project that makes use of imports.
+Check out the [example](https://github.com/soulwire/Coffee-Percolator/tree/master/example/src) for a ridiculous hypothetical project that makes use of imports.
 
 ### Usage
 

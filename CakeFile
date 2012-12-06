@@ -7,10 +7,17 @@
 --------------------------------------------------
 ###
 
+# Source directory
 source = 'example/src'
+
+# Output directory & JS file
 output = 'example/build/app.js'
+
+# File (in `source` dir) to build import tree from
 main   = 'app.coffee'
-args   = '--bare'
+
+# Options passed to CoffeeScript the compiler (e.g. --bare)
+opts   = '--lint'
 
 ###
 --------------------------------------------------
@@ -190,7 +197,7 @@ task 'build', 'Build main source and dependancies', ( options ) ->
 
             throw error if error
 
-            exec "coffee -c #{args} #{merged}", ( error ) ->
+            exec "coffee -c #{opts} #{merged}", ( error ) ->
 
                 if error then throw error else
 

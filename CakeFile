@@ -136,11 +136,11 @@ task 'watch', 'Watch sources and build changes', ( options ) ->
 ###
 
 task 'build', 'Build main source and dependancies', ( options ) ->
-
-    # Build a list of all files
+    
     files = traverse source
 
     # Process them into Nodes
+
     catalog files, ( nodes ) ->
 
         # Map all source paths to Nodes

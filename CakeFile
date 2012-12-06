@@ -10,6 +10,7 @@
 source = 'example/src'
 output = 'example/build/app.js'
 main   = 'app.coffee'
+args   = '--bare'
 
 ###
 --------------------------------------------------
@@ -189,7 +190,7 @@ task 'build', 'Build main source and dependancies', ( options ) ->
 
             throw error if error
 
-            exec "coffee -c #{merged}", ( error ) ->
+            exec "coffee -c #{args} #{merged}", ( error ) ->
 
                 if error then throw error else
 

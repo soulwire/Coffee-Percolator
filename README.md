@@ -32,7 +32,11 @@ Check out the [example](https://github.com/soulwire/Coffee-Percolator/tree/maste
 
 ### Usage
 
-Coffee Percolator is just a CakeFile, so use it in the usual way: `cake {task name}`
+You probably just want the CakeFile, so grab that first
+
+	curl -o CakeFile https://raw.github.com/soulwire/Coffee-Percolator/master/CakeFile
+
+then use it in the usual cakey manner: `cake {task name}`
 
 Currently there are two tasks available, `build` and `watch` and you've probably already guessed what they do.
 

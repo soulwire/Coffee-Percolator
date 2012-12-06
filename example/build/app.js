@@ -181,6 +181,8 @@
     }
   };
 
+  self.app = App;
+
   App.init();
 
 }).call(this);

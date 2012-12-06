@@ -30,6 +30,7 @@ opts   = '--lint'
 fs = require 'fs'
 util = require 'util'
 {exec} = require 'child_process'
+try growl = require 'growl'
 
 ###
 --------------------------------------------------
@@ -203,4 +204,18 @@ task 'build', 'Build main source and dependancies', ( options ) ->
 
                     if fs.existsSync merged then fs.unlink merged, ( error ) -> throw error if error
 
-                util.log "Project compiled into: #{output}"
+                grrrr "Project compiled into: #{output}"
+
+###
+--------------------------------------------------
+    
+    Growl proxy
+
+--------------------------------------------------
+###
+
+grrrr = ( message = '' ) ->
+
+    options = title: 'CoffeeScript'
+    growl?.notify message, options
+    util.log message

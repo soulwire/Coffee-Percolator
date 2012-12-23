@@ -174,7 +174,7 @@ task 'build', 'Build main source and dependancies', ( options ) ->
 
                 if target = match[1]
 
-                    key = [ source, target.replace /\.(?!coffee)/, '/' ].join '/'
+                    key = [ source, target.replace /\.(?!coffee)/g, '/' ].join '/'
 
                     if not map[ key ] then throw "No file matching import: #{key}"
                     else node.add link for link in map[ key ]
